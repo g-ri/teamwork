@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>アラジン</title>
+            <meta charset="utf-8">
+            <link rel="stylesheet" href="https://unpkg.com/karma-css@latest/dist/karma.min.css">
+            <link rel="stylesheet"
+            href="{% static 'css/review.css' %}" >
+    </head>
+    <body>
+        <div class="container">
+            <h2>アラジンレビュー</h2>
+            <form action="{% url 'add' %}" method="post">
+                {% csrf_token %}
+                <div class="text">
+                    ニックネーム{{ form.nickname }}<br>
+                    評価(0.0～５.0){{ form.rate }}<br>
+                    レビュー{{ form.review }}<br>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="button">
+                        レビュー追加
+                    </button>
+                </div>
+            </form>
+
+            <table class="cinemereview list table">
+                <tbody>                      
+                    {% for post in posts %}
+                        <tr>
+                            <td>
+                                <div class="message">
+                                    {{ post.nickname }}&nbsp;&nbsp;
+                                    {{ post.rate }}&nbsp;&nbsp;
+                                    {{ post.review }}&nbsp;&nbsp;
+                                </div>
+
+                                <div>{{ post.created_date }}</div>
+                            </td>
+                            <td>
+                                <form action="{% url 'update' post.id %}" method="post">
+                                    {% csrf_token %}
+                                    <button class="button update">更新</button>
+                                </form>
+                                <form action="{% url 'delete' post.id %}" method="post">
+                                    {% csrf_token %}
+                                    <button class="button del">削除</button>
+                                </form>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
