@@ -1,4 +1,5 @@
 from django.db import models
+from django.core import validators
 
 # Create your models here.
 class cinemareview(models.Model):
@@ -21,7 +22,7 @@ class cinemareview(models.Model):
     blank=True,
     null=True,
     default=0.0,
-    # validators=[validators.MinValueValidator(0.0),validators.MaxValueValidator(5.0)],
+    validators=[validators.MinValueValidator(0.0), validators.MaxValueValidator(5.0)],
     )
     
 
