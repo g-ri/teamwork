@@ -65,23 +65,33 @@
                     {% for post in posts %}
                         <tr>
                             <td>
-                                <div class="message">
-                                    ニックネーム：{{ post.nickname }}&nbsp;&nbsp;
-                                    評価：{{ post.rate }}&nbsp;&nbsp;
-                                    レビュー：{{ post.review }}&nbsp;&nbsp;
-                                </div>
+                                <div>
+                                    <div class="message">
+                                        ニックネーム：{{ post.nickname }}&nbsp;&nbsp;
+                                    </div>
+                                    <div class="message">
+                                        評価：{{ post.rate }}&nbsp;&nbsp;
+                                    </div>
+                                    <div class="message">
+                                        レビュー：{{ post.review }}&nbsp;&nbsp;
+                                    </div>
 
-                                <div>{{ post.created_date }}</div>
+                                    <div>{{ post.created_date }}</div>
+                                </div>
                             </td>
                             <td>
-                                <form action="{% url 'update' post.id %}" method="post">
-                                    {% csrf_token %}
-                                    <button class="button update">更新</button>
-                                </form>
-                                <form action="{% url 'delete' post.id %}" method="post">
-                                    {% csrf_token %}
-                                    <button class="button del">削除</button>
-                                </form>
+                                <div>
+                                    <td>
+                                        <form action="{% url 'update' post.id %}" method="post">
+                                            {% csrf_token %}
+                                            <button class="button update">更新</button>
+                                        </form>
+                                        <form action="{% url 'delete' post.id %}" method="post">
+                                            {% csrf_token %}
+                                            <button class="button del">削除</button>
+                                        </form>
+                                    </td>
+                                </div>
                             </td>
                         </tr>
                     {% endfor %}
