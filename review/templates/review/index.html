@@ -4,14 +4,22 @@
     <head>
         <title>アラジン</title>
             <meta charset="utf-8">
-            <link rel="stylesheet" href="https://unpkg.com/karma-css@latest/dist/karma.min.css">
+            <!-- <link rel="stylesheet" href="https://unpkg.com/karma-css@latest/dist/karma.min.css"> -->
+            <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
             <link rel="stylesheet"
             href="{% static 'css/review.css' %}" >
     </head>
     <body>
 
         <div class="container">
-            <h2>アラジンレビュー</h2>
+            <h2 class="text-center">アラジンレビュー</h2>
+            <!-- <a>
+                <img src="review\static\img\Aladdin.jpg" alt="アラジンのイラスト" title="アラジン"></img>
+            </a> -->
             <img src="{% static 'img\Aladdin.jpg' %}">
             <h3><strong>解説</strong></h3>
             <p itemprop="description">
