@@ -5,16 +5,12 @@
         <title>アラジン</title>
             <meta charset="utf-8">
             <!-- <link rel="stylesheet" href="https://unpkg.com/karma-css@latest/dist/karma.min.css"> -->
-            <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1"> -->
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-            <link rel="stylesheet"
-            href="{% static 'css/review.css' %}" >
+            <link href='review\static\css\review.css' rel="stylesheet">
     </head>
     <body>
-
         <div class="container">
             <h2 class="text-center">アラジンレビュー</h2>
             <!-- <a>
@@ -33,7 +29,7 @@
                     おなじみの楽曲も流れるほか、「ラ・ラ・ランド」「グレイテスト・ショーマン」のベンジ・パセック＆ジャスティン・ポールが
                     手がけた新曲も物語を彩る。
             </p>
-            <a href="https://www.disney.co.jp/movie/aladdin.html"><strong>公式サイトへ</strong></a>
+            <a class="btn btn-primary btn-lg" href="https://www.disney.co.jp/movie/aladdin.html" role="button"><strong>公式サイトへ</strong></a>
             <h3><strong>レビュー</strong></h3>
             <form action="{% url 'add' %}" method="post">
                 {% csrf_token %}
