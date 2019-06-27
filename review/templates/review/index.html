@@ -38,16 +38,29 @@
             <form action="{% url 'add' %}" method="post">
                 {% csrf_token %}
                 <div class="text">
-                    ニックネーム{{ form.nickname }}<br>
-                    評価(0.0～５.0)<input type="number" name="rate" step="0.1" min="0" max="5" value="0.0"><br>
-                    レビュー{{ form.review }}<br>
-
+                    <table>
+                        <tr>
+                            <td>ニックネーム</td>
+                            <td>{{ form.nickname }}</td>
+                        </tr>
+                        <tr>
+                            <td>評価(0.0～５.0)</td>
+                            <td><input type="number" name="rate" step="0.1" min="0" max="5" value="0.0"></td>
+                        </tr>
+                        <tr>
+                            <td>レビュー</td>
+                            <td>{{ form.review }}</td>
+                        </tr>
+                        <!-- ニックネーム{{ form.nickname }}<br>
+                        評価(0.0～５.0)<input type="number" name="rate" step="0.1" min="0" max="5" value="0.0"><br>
+                        レビュー{{ form.review }}<br> -->
+                    </table>
                 </div>
 
                 <div class="form-group">
                     <button type="submit" class="button">
-                        レビュー追加
-                    </button>
+                    レビュー追加
+                    </button>           
                 </div>
             </form>
             <h3><strong>レビュー一覧</strong></h3>
