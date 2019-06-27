@@ -12,12 +12,12 @@
     </head>
     <body>
         <div class="container">
-            <h2 class="text-center">アラジンレビュー</h2>
+            <h2 class="text-center">Aladdin Review</h2>
             <!-- <a>
                 <img src="review\static\img\Aladdin.jpg" alt="アラジンのイラスト" title="アラジン"></img>
             </a> -->
             <img src="{% static 'img\Aladdin.jpg' %}">
-            <h3><strong>解説</strong></h3>
+            <h3 class="text-center"><strong>Introduction</strong></h3>
             <p itemprop="description">
                     「アラビアン・ナイト」の物語をベースに、不思議なランプを手に入れた若者が愛する女性を
                     守るため繰り広げる冒険を描いたディズニー・アニメの名作を、「シャーロック・ホームズ」シリーズの
@@ -30,7 +30,7 @@
                     手がけた新曲も物語を彩る。
             </p>
             <a class="btn btn-primary btn-lg" href="https://www.disney.co.jp/movie/aladdin.html" role="button"><strong>公式サイトへ</strong></a>
-            <h3><strong>レビュー</strong></h3>
+            <h3 class="text-center"><strong>Review</strong></h3>
             <form action="{% url 'add' %}" method="post">
                 {% csrf_token %}
                 <div class="text">
@@ -46,7 +46,7 @@
                     </button>
                 </div>
             </form>
-            <h3><strong>レビュー一覧</strong></h3>
+            <h3 class="text-center"><strong>Reviews</strong></h3>
             <table class="cinemereview list table">
                 <tbody>                      
                     {% for post in posts %}
