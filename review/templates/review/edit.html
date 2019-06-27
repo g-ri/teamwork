@@ -12,16 +12,34 @@
         <div class="container">
             <h2>アラジン更新</h2>
             <div class="text">
-                ニックネーム：{{ post.nickname }}&nbsp;&nbsp;                   
-                評価(0.0～５.0)：{{ post.rate }}&nbsp;&nbsp;
-                レビュー：{{ post.review }} 
+                <table>
+                    <tr>
+                        <td>ニックネーム：</td>
+                        <td>{{ post.nickname }}</td>
+                    </tr>
+                    <tr>
+                        <td>評価：</td>
+                        <td>{{ post.rate }}</td>
+                    </tr>
+                    <tr>
+                        <td>レビュー：</td>
+                        <td>{{ post.review }}</td>
+                    </tr>
+                </table>
             </div>
             <form action="{% url 'do_update' post.id %}" method="post">
                 {% csrf_token %}
                 <div class="text">
-                    <!-- ニックネーム{{ form.nickname }} -->                   
-                    評価(0.0～５.0)<input type="number" name="rate" step="0.1" min="0" max="5" value="0.0"><br>
-                    レビュー{{ form.review }}<br>
+                    <table>
+                        <tr>
+                            <td> 評価(0.0～５.0)</td>
+                            <td><input type="number" name="rate" step="0.1" min="0" max="5" value="0.0"></td>
+                        </tr>
+                        <tr>
+                            <td> レビュー</td>
+                            <td>{{ form.review }}</td>
+                        </tr>
+                    </table>
                 </div>
 
                 <div class="form-group">
