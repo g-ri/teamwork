@@ -12,9 +12,6 @@
 
         <div class="container">
             <h2>アラジンレビュー</h2>
-            <!-- <a>
-                <img src="review\static\img\Aladdin.jpg" alt="アラジンのイラスト" title="アラジン"></img>
-            </a> -->
             <img src="{% static 'img\Aladdin.jpg' %}">
             <h3><strong>解説</strong></h3>
             <p itemprop="description">
@@ -28,6 +25,7 @@
                     おなじみの楽曲も流れるほか、「ラ・ラ・ランド」「グレイテスト・ショーマン」のベンジ・パセック＆ジャスティン・ポールが
                     手がけた新曲も物語を彩る。
             </p>
+            <a href="https://www.disney.co.jp/movie/aladdin.html"><strong>公式サイトへ</strong></a>
             <h3><strong>レビュー</strong></h3>
             <form action="{% url 'add' %}" method="post">
                 {% csrf_token %}
@@ -50,9 +48,9 @@
                         <tr>
                             <td>
                                 <div class="message">
-                                    {{ post.nickname }}&nbsp;&nbsp;
-                                    {{ post.rate }}&nbsp;&nbsp;
-                                    {{ post.review }}&nbsp;&nbsp;
+                                    ニックネーム：{{ post.nickname }}&nbsp;&nbsp;
+                                    評価：{{ post.rate }}&nbsp;&nbsp;
+                                    コメント：{{ post.review }}&nbsp;&nbsp;
                                 </div>
 
                                 <div>{{ post.created_date }}</div>
