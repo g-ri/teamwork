@@ -21,7 +21,6 @@ class cinemareview(models.Model):
     blank=True,
     null=True,
     default=0.0,
-    # validators=[validators.MinValueValidator(0.0),validators.MaxValueValidator(5.0)],
     )
     
 
