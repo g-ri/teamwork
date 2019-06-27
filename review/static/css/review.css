@@ -15,14 +15,20 @@ h3 {
     font-family: Century;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* td {
 =======
+=======
+>>>>>>> origin/akita/dev
 /* p {
     background: #2C242A;
     color: #7187B0;
 } */
 
 td {
+<<<<<<< HEAD
+>>>>>>> origin/akita/dev
+=======
 >>>>>>> origin/akita/dev
     border-top-width: 3px;
     border-top-color: #ffe0c1;
@@ -30,7 +36,7 @@ td {
 } */
 .message {
     font-size: 20px;
-    font-weight: 60%;
+    font-weight: 600;
 }
 .button {
     color: #fa8072;
