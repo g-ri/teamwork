@@ -20,7 +20,7 @@
                 {% csrf_token %}
                 <div class="text">
                     <!-- ニックネーム{{ form.nickname }} -->                   
-                    評価(0.0～５.0){{ form.rate }}<br>
+                    評価(0.0～５.0)<input type="number" name="rate" step="0.1" min="0" max="5" value="0.0"><br>
                     レビュー{{ form.review }}<br>
                 </div>
 

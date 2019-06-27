@@ -39,8 +39,9 @@
                 {% csrf_token %}
                 <div class="text">
                     ニックネーム{{ form.nickname }}<br>
-                    評価(0.0～５.0){{ form.rate }}<br>
+                    評価(0.0～５.0)<input type="number" name="rate" step="0.1" min="0" max="5" value="0.0"><br>
                     レビュー{{ form.review }}<br>
+
                 </div>
 
                 <div class="form-group">
@@ -58,7 +59,7 @@
                                 <div class="message">
                                     ニックネーム：{{ post.nickname }}&nbsp;&nbsp;
                                     評価：{{ post.rate }}&nbsp;&nbsp;
-                                    コメント：{{ post.review }}&nbsp;&nbsp;
+                                    レビュー：{{ post.review }}&nbsp;&nbsp;
                                 </div>
 
                                 <div>{{ post.created_date }}</div>

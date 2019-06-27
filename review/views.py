@@ -14,7 +14,7 @@ def index(req):
     return render(req, 'review/index.html', context)
 
 def add(req):
-    form = PostForm(req.POST)   
+    form = PostForm(req.POST)
     form.save(commit=True)
     return HttpResponseRedirect(reverse('index'))
 
@@ -30,10 +30,10 @@ def update(req, id=None):
     return render(req, 'review/edit.html', context)
 
 def do_update(req, id=None):
-    c = cinemareview.objects.get(pk=id)
-    c.review = req.POST["review"]
-    c.rate = req.POST["rate"]
-    c.save()
+    cinema_all = cinemareview.objects.get(pk=id)
+    cinema_all.review = req.POST["review"]
+    cinema_all.rate = req.POST["rate"]
+    cinema_all.save()
     posts = cinemareview.objects.all()
     form = PostForm()
     context = {'posts': posts, 'form': form, }
