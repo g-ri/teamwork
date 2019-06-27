@@ -18,7 +18,7 @@
             </a> -->
             <img src="{% static 'img\Aladdin.jpg' %}">
             <h3 class="text-center"><strong>Introduction</strong></h3>
-            <p itemprop="description">
+            <div class="box1" itemprop="description">
                     「アラビアン・ナイト」の物語をベースに、不思議なランプを手に入れた若者が愛する女性を
                     守るため繰り広げる冒険を描いたディズニー・アニメの名作を、「シャーロック・ホームズ」シリーズの
                     ガイ・リッチー監督のメガホンでディズニーが実写映画。生きるために盗みを働きながらも真っ直ぐな心を持ち、
@@ -28,8 +28,8 @@
                     アニメ版でアカデミー主題歌賞を受賞したアラン・メンケン作曲、ティム・ライス作詞の「ホール・ニュー・ワールド」など
                     おなじみの楽曲も流れるほか、「ラ・ラ・ランド」「グレイテスト・ショーマン」のベンジ・パセック＆ジャスティン・ポールが
                     手がけた新曲も物語を彩る。
-            </p>
-            <a class="btn btn-primary btn-lg" href="https://www.disney.co.jp/movie/aladdin.html" role="button"><strong>公式サイトへ</strong></a>
+            </div>
+            <a class="btn-circle-border-double" href="https://www.disney.co.jp/movie/aladdin.html" role="button"><strong>公式サイトへ</strong></a>
             <h3 class="text-center"><strong>Review</strong></h3>
             <form action="{% url 'add' %}" method="post">
                 {% csrf_token %}
@@ -54,7 +54,7 @@
                 </div>
 
                 <div class="form-group">
-                    <button type="submit" class="button">
+                    <button type="submit" class="btn-circle-border-double">
                     レビュー追加
                     </button>           
                 </div>
@@ -84,11 +84,11 @@
                                     <td>
                                         <form action="{% url 'update' post.id %}" method="post">
                                             {% csrf_token %}
-                                            <button class="button update">更新</button>
+                                            <button class="btn-circle-fishy">更新</button>
                                         </form>
                                         <form action="{% url 'delete' post.id %}" method="post">
                                             {% csrf_token %}
-                                            <button class="button del">削除</button>
+                                            <button class="btn-circle-fishy">削除</button>
                                         </form>
                                     </td>
                                 </div>

@@ -1,5 +1,5 @@
 body {
-    background: #3A555F;
+    background: #2C242A;
 }
 h2 {
     font-size: 50px;
@@ -9,15 +9,69 @@ h2 {
 }
 h3 {
     font-size: 25px;
-    background: #CFB06A;
-    color: #3A555F;
+    color: #CFB06A;
     font-weight: 800;
     font-family: Century;
 }
-/* p {
-    background: #2C242A;
-    color: #7187B0;
-} */
+.btn-circle-border-double {
+    display: inline-block;
+    text-decoration: none;
+    color: #CFB06A;
+    width: 90px;
+    height: 90px;
+    line-height: 85px;
+    border-radius: 50%;
+    border: double 4px #CFB06A;
+    text-align: center;
+    overflow: hidden;
+    transition: .6s;
+}
+.btn-circle-border-double:hover {
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+}
+.box1{
+    margin:2em 0;
+    position: relative;
+    padding: 0.5em 1.5em;
+    border-top: solid 2px black;
+    border-bottom: solid 2px black;
+    background: #892590;
+    color: #CFB06A;
+}
+.box1:before, .box1:after{
+    content: '';
+    position: absolute;
+    top: -10px;
+    width: 2px;
+    height: -webkit-calc(100% + 20px);
+    height: calc(100% + 20px);
+    background-color: black;
+}
+.box1:before {left: 10px;}
+.box1:after {right: 10px;}
+.box1 p {
+    margin: 0; 
+    padding: 0;
+}
+
+.btn-circle-fishy {
+    display: inline-block;
+    text-decoration: none;
+    color: #2C242A;
+    width: 50px;
+    height: 50px;
+    line-height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+    background: #CFB06A;
+    transition: .4s;
+}
+.btn-circle-fishy:hover {
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg);
+}
 
 td {
     border-top-width: 3px;
