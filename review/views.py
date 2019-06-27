@@ -14,7 +14,7 @@ def index(req):
     return render(req, 'review/index.html', context)
 
 def add(req):
-    form = PostForm(req.POST)   
+    form = PostForm(req.POST)
     form.save(commit=True)
     return HttpResponseRedirect(reverse('index'))
 

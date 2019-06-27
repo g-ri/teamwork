@@ -16,10 +16,6 @@
     <body>
 
         <div class="container">
-<<<<<<< HEAD
-            <h2>アラジンレビュー</h2>
-            <form action="{% url 'add' %}" method="post" id="review">
-=======
             <h2 class="text-center">アラジンレビュー</h2>
             <!-- <a>
                 <img src="review\static\img\Aladdin.jpg" alt="アラジンのイラスト" title="アラジン"></img>
@@ -40,7 +36,6 @@
             <a href="https://www.disney.co.jp/movie/aladdin.html"><strong>公式サイトへ</strong></a>
             <h3><strong>レビュー</strong></h3>
             <form action="{% url 'add' %}" method="post">
->>>>>>> origin/r-gen/dev
                 {% csrf_token %}
                 <div class="text">
                     ニックネーム{{ form.nickname }}<br>
@@ -64,11 +59,7 @@
                                 <div class="message">
                                     ニックネーム：{{ post.nickname }}&nbsp;&nbsp;
                                     評価：{{ post.rate }}&nbsp;&nbsp;
-<<<<<<< HEAD
                                     レビュー：{{ post.review }}&nbsp;&nbsp;
-=======
-                                    コメント：{{ post.review }}&nbsp;&nbsp;
->>>>>>> origin/r-gen/dev
                                 </div>
 
                                 <div>{{ post.created_date }}</div>
