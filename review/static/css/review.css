@@ -94,3 +94,9 @@ h3::before {
     -webkit-transform: rotate(10deg);
     transform: rotate(10deg);
 }
+.input_table{
+    font-size: 20px;
+    width: 100%;
+    border-top-color: #ffe0c1;
+    background: #fdf5e6;
+}
