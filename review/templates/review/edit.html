@@ -12,21 +12,22 @@
         <div class="container">
             <h2>アラジン更新</h2>
             <div class="text">
+                <h3 class="text-center"><strong>My Review</strong></h3>
                 <table>
                     <tr>
-                        <td>ニックネーム：</td>
-                        <td>{{ post.nickname }}</td>
+                        <td>ニックネーム：{{ post.nickname }}</td>
                     </tr>
+
                     <tr>
-                        <td>評価：</td>
-                        <td>{{ post.rate }}</td>
+                        <td>評価：{{ post.rate }}</td>
                     </tr>
+
                     <tr>
-                        <td>レビュー：</td>
-                        <td>{{ post.review }}</td>
+                        <td>レビュー：{{ post.review }}</td>
                     </tr>
                 </table>
             </div>
+            <h3 class="text-center"><strong>Change My Review</strong></h3>
             <form action="{% url 'do_update' post.id %}" method="post">
                 {% csrf_token %}
                 <div class="text">
@@ -39,6 +40,7 @@
                             <td><label for="InputTextarea">レビュー</label></td>
                             <td><textarea class="form-control" placeholder="レビューを入力してください" name="review" required></textarea></td>
                         </tr>
+
                     </table>
                 </div>
 
