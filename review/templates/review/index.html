@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Aladdin</title>
+        <title>アラジン</title>
             <meta charset="utf-8">
             <!-- <link rel="stylesheet" href="https://unpkg.com/karma-css@latest/dist/karma.min.css"> -->
             <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
@@ -35,18 +35,20 @@
                 {% csrf_token %}
                 <div class="text">
                     <table>
-                        <tr>
-                            <td>ニックネーム</td>
-                            <td>{{ form.nickname }}</td>
-                        </tr>
-                        <tr>
-                            <td>評価(0.0～５.0)</td>
-                            <td><input type="number" name="rate" step="0.1" min="0" max="5" value="0.0"></td>
-                        </tr>
-                        <tr>
-                            <td>レビュー</td>
-                            <td>{{ form.review }}</td>
-                        </tr>
+                        <div class="form-group">
+                            <tr>
+                                <td><label>ニックネーム</label></td>
+                                <td>{{ form.nickname }}</td>
+                            </tr>
+                            <tr>
+                                <td><label>評価(0.0～５.0)</label></td>
+                                <td><input class="form-control" type="number" name="rate" step="0.1" min="0" max="5" value="0.0"></td>
+                            </tr>
+                            <tr>
+                                <td><label>レビュー</label></td>
+                                <td>{{ form.review }}</td>
+                            </tr>
+                        </div>
                         <!-- ニックネーム{{ form.nickname }}<br>
                         評価(0.0～５.0)<input type="number" name="rate" step="0.1" min="0" max="5" value="0.0"><br>
                         レビュー{{ form.review }}<br> -->
