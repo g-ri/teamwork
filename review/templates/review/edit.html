@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Review Update</title>
+        <title>アラジン更新</title>
             <meta charset="utf-8">
             <link rel="stylesheet" href="https://unpkg.com/karma-css@latest/dist/karma.min.css">
             <link rel="stylesheet"
@@ -10,7 +10,7 @@
     </head>
     <body>
         <div class="container">
-            <h2>Review Update</h2>
+            <h2>アラジン更新</h2>
             <div class="text">
                 <table>
                     <tr>
@@ -32,12 +32,12 @@
                 <div class="text">
                     <table>
                         <tr>
-                            <td> 評価(0.0～５.0)</td>
-                            <td><input type="number" name="rate" step="0.1" min="0" max="5" value="0.0"></td>
+                            <td><label for="InputTextarea">評価(0.0～５.0)</label></td>
+                            <td><input class="form-control" type="number" name="rate" step="0.1" min="0" max="5" value="0.0" required></td>
                         </tr>
                         <tr>
-                            <td> レビュー</td>
-                            <td>{{ form.review }}</td>
+                            <td><label for="InputTextarea">レビュー</label></td>
+                            <td><textarea class="form-control" placeholder="レビューを入力してください" name="review" required></textarea></td>
                         </tr>
                     </table>
                 </div>

@@ -33,33 +33,31 @@
             <h3 class="text-center"><strong>Review</strong></h3>
             <form action="{% url 'add' %}" method="post">
                 {% csrf_token %}
-                <div class="text">
-                    <table>
+                <center>
+                    <table  class="input_table border">
                         <div class="form-group">
                             <tr>
-                                <td><label>ニックネーム</label></td>
-                                <td>{{ form.nickname }}</td>
+                                <td><label for="InputTextarea">ニックネーム</label></td>
+                                <td><textarea class="form-control" placeholder="ニックネームを入力してください" name="nickname" required></textarea></td>
                             </tr>
                             <tr>
-                                <td><label>評価(0.0～５.0)</label></td>
-                                <td><input class="form-control" type="number" name="rate" step="0.1" min="0" max="5" value="0.0"></td>
+                                <td><label for="InputTextarea">評価(0.0～５.0)</label></td>
+                                <td><input class="form-control" type="number" name="rate" step="0.1" min="0" max="5" value="0.0" required></td>
                             </tr>
                             <tr>
-                                <td><label>レビュー</label></td>
-                                <td>{{ form.review }}</td>
+                                <td><label for="InputTextarea">レビュー</label></td>
+                                <td><textarea class="form-control" placeholder="レビューを入力してください" name="review" required></textarea></td>
+                                <td>
+                                    <div align="right">
+                                        <button type="submit" class="button">
+                                            レビュー追加
+                                        </button>
+                                    </div>
+                                </td>
                             </tr>
                         </div>
-                        <!-- ニックネーム{{ form.nickname }}<br>
-                        評価(0.0～５.0)<input type="number" name="rate" step="0.1" min="0" max="5" value="0.0"><br>
-                        レビュー{{ form.review }}<br> -->
                     </table>
-                </div>
-
-                <div class="form-group">
-                    <button type="submit" class="button">
-                    レビュー追加
-                    </button>           
-                </div>
+                </center>
             </form>
             <h3 class="text-center"><strong>Reviews</strong></h3>
             <table class="cinemereview list table">

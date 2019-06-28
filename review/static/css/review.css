@@ -14,11 +14,6 @@ h3 {
     font-weight: 800;
     font-family: Century;
 }
-/* p {
-    background: #2C242A;
-    color: #7187B0;
-} */
-
 td {
     border-top-width: 3px;
     border-top-color: #ffe0c1;
@@ -26,9 +21,15 @@ td {
 }
 .message {
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 60%;
 }
 .button {
     color: #fa8072;
     background: #fffff0;
+}
+.input_table{
+    font-size: 20px;
+    width: 100%;
+    border-top-color: #ffe0c1;
+    background: #fdf5e6;
 }
